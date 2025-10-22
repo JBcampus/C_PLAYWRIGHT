@@ -10,5 +10,6 @@
   "editor.detectIndentation": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "files.autoSave": "onFocusChange"
+  "files.autoSaveDelay": 10,
+  "files.autoSave": "afterDelay"
 }

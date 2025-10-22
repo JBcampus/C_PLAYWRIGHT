@@ -10,7 +10,15 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc -p tsconfig.json",
     "dev": "tsx playground/clase1/taller1.ts",
-    "test": "echo \"Prueba de script\" && exit 1"
+    "test": "echo \"Prueba de script\" && exit 1",
+
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:ci": "eslint . --max-warnings=0",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+
+    "validate": "npm run format:check && npm run lint:ci && npm run"
   },
   "keywords": [],
   "author": "",
