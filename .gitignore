@@ -1,0 +1,8 @@
+#generales
+node_modules/
+dist/
+
+#reportes
+coverage/
+test-result/
+artifacts/
