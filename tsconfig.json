@@ -27,12 +27,6 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "pages/**/*.ts",
-    "helpers/**/*.ts",
-    "tests/**/*.ts",
-    "playground/**/*.ts",
-  ],
+  "include": ["pages/**/*.ts", "helpers/**/*.ts", "tests/**/*.ts", "playground/**/*.ts"],
   "exclude": ["node_modules", "dist"]
-
 }

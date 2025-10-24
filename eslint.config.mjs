@@ -19,16 +19,16 @@ export default defineConfig([
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    files: ['**/*.ts'],
+    files: ["**/*.ts"],
     languageOptions: {
-      sourceType: 'module',
-      globals: { ...globals.node, ...globals.browser }
+      sourceType: "module",
+      globals: { ...globals.node, ...globals.browser },
     },
     rules: {
-      'no-console': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/no-unused-vars': 'off'
-    }
+      "no-console": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "off",
+    },
   },
   eslintConfigPrettier,
 ]);
