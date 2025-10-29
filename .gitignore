@@ -6,3 +6,10 @@ dist/
 coverage/
 test-result/
 artifacts/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
