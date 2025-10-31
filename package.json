@@ -12,6 +12,8 @@
     "dev": "tsx playground/clase1/taller1.ts",
     "taller2": "tsx playground/clase2/index.ts",
     "test": "echo \"Prueba de script\" && exit 1",
+    "tarea1": "tsx playground/tarea1/index.ts",
+    
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:ci": "eslint . --max-warnings=0",
