@@ -13,7 +13,8 @@
     "taller2": "tsx playground/clase2/index.ts",
     "test": "echo \"Prueba de script\" && exit 1",
     "tarea1": "tsx playground/tarea1/index.ts",
-    
+    "tarea2": "npx playwright test tests/tarea2/suitePurchaseFlow.spec.ts",
+
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:ci": "eslint . --max-warnings=0",
