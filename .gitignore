@@ -1,0 +1,13 @@
+# Dependencias y compilados
+node_modules/
+dist/
+
+# Reportes
+coverage/
+test-results/
+playwright-report/
+artifacts
+
+# Logs y entorno
+*.log
+.env
