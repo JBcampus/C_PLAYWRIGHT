@@ -1,4 +1,3 @@
+const nombre = "Javier Loartez";
 
-const nombre = "Carlos Ramirez"
-
-console.log("Mi primer archivo ts, mi nombre es ", nombre)
+console.log("Mi primer archivo ts, mi nombre es ", nombre);
