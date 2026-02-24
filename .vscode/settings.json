@@ -9,5 +9,6 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.fontSize": 16
 }
