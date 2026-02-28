@@ -30,15 +30,15 @@ inválidas' }
 export const login = async (regis: Register): Promise<Result<User>> => {
   const { username, password, confirmPassword } = regis;
   // Validaciones.
-    // longitud minima
-    if (password.length < 6){
-      return { ok: false, message: "Longitud Minisma es 6" };
-    }
+  // longitud minima
+  if (password.length < 6) {
+    return { ok: false, message: "Longitud Minisma es 6" };
+  }
 
-    // validación de contraseña y confirmación de contraseña
-    if (password !== confirmPassword) {
-      return { ok: false, message: "Password No coincide" };
-    }
+  // validación de contraseña y confirmación de contraseña
+  if (password !== confirmPassword) {
+    return { ok: false, message: "Password No coincide" };
+  }
 
   //simulación validación pesada
   await new Promise<void>((r) => setTimeout(r, 5000));
@@ -61,4 +61,5 @@ export const login = async (regis: Register): Promise<Result<User>> => {
 };
 
 /** Formatea un usuario para mostrar en log. */
-export const formatUser = (u: User): string => `[${u.role}] ${u.username} ${u.password} ${u.email} (${u.id})`;
+export const formatUser = (u: User): string =>
+  `[${u.role}] ${u.username} ${u.password} ${u.email} (${u.id})`;
