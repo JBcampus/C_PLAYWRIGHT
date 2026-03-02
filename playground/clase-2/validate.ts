@@ -1,5 +1,5 @@
-import { randomUUID } from 'crypto';
-import type { Credentials, Result, User, Role } from './types';
+import { randomUUID } from "crypto";
+import type { Credentials, Result, User, Role } from "./types";
 
 /**
 * Simula un login. Retorna un usuario si la contraseña coincide.
@@ -28,29 +28,30 @@ inválidas' }
 *
 * @see {@link Credentials} {@link User} {@link Role} {@link Result}
 */
-export const login = async (creds: Credentials):
-Promise<Result<User>> => {
-    const { username, password } = creds;
-    // Validaciones.
-    if (password !== 'permitido') {
-      return { ok: false, message: 'Credenciales inválidas' };
-    }
-    //simulación validación pesada
-    await new Promise<void>(r => setTimeout(r, 5000));
+export const login = async (creds: Credentials): Promise<Result<User>> => {
+  const { username, password } = creds;
+  // Validaciones.
+  if (password !== "permitido") {
+    return { ok: false, message: "Credenciales inválidas" };
+  }
+  //simulación validación pesada
+  await new Promise<void>((r) => setTimeout(r, 5000));
 
-    const role: Role =
-      username.startsWith('adm') ? 'admin' : username.startsWith('ed')
-    ? 'editor' : 'viewer';
-    
-    const user: User = {
-      id: randomUUID(),
-      username,
-      role
-    };
+  const role: Role = username.startsWith("adm")
+    ? "admin"
+    : username.startsWith("ed")
+      ? "editor"
+      : "viewer";
 
-    return { ok: true, data: user };
+  const user: User = {
+    id: randomUUID(),
+    username,
+    role,
   };
-  
-  /** Formatea un usuario para mostrar en log. */
-  export const formatUser = (u: User): string => `[${u.role}]
+
+  return { ok: true, data: user };
+};
+
+/** Formatea un usuario para mostrar en log. */
+export const formatUser = (u: User): string => `[${u.role}]
   ${u.username} (${u.id})`;

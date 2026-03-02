@@ -1,16 +1,17 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
     // File Layout
     "rootDir": ".",
     "outDir": "./dist",
-    
+
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
     // For nodejs:
-    "lib": ["esnext"],
+    //"lib": ["esnext"],
+    "lib": ["esnext", "DOM"],
     "types": ["node"],
     // and npm install -D @types/node
 
@@ -31,13 +32,8 @@
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-    "include": [
-    "pages/**/*.ts",
-    "helpers/**/*.ts",
-    "tests/**/*.ts",
-    "playground/**/*.ts",
-    ],
-    "exclude": ["node_modules", "dist"]
+  "include": ["pages/**/*.ts", "helpers/**/*.ts", "tests/**/*.ts", "playground/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

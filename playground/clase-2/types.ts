@@ -1,5 +1,5 @@
 /** Rol permitido en la app */
-export type Role = 'admin' | 'editor' | 'viewer';
+export type Role = "admin" | "editor" | "viewer";
 
 /** Interfaz de usuario para autenticación */
 export interface User {
