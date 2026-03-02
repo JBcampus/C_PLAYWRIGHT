@@ -9,3 +9,9 @@ artifacts
 # Logs y entorno
 *.log
 .env
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
