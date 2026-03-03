@@ -19,7 +19,7 @@ test.describe("Navegación básica", () => {
       console.log("Inicializando prueba Navegación y acciones");
     });
     test.beforeEach(async ({ page }) => {
-      console.log("Inicializando test")
+      console.log("Inicializando test");
       await page.goto("https://www.google.com");
     });
 
@@ -52,7 +52,6 @@ test.describe("Navegación básica", () => {
 
       console.log("Textos Ingresados:", todosTexts);
     });
-
 
     test("Navegar a pagina y autentificar", async ({ page }) => {
       await page.goto("https://the-internet.herokuapp.com/login");

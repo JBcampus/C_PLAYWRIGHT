@@ -29,20 +29,23 @@ export const login = async (creds: Credentials): Promise<Result<User>> => {
   const { username, password } = creds;
 
   // Validaciones.
-  if (password !== 'permitido') {
-    return { ok: false, message: 'Credenciales inválidas' };
+  if (password !== "permitido") {
+    return { ok: false, message: "Credenciales inválidas" };
   }
 
   //simulación validación pesada
-  await new Promise<void>(r => setTimeout(r, 5000));
+  await new Promise<void>((r) => setTimeout(r, 5000));
 
-  const role: Role =
-    username.startsWith('adm') ? 'admin' : username.startsWith('ed') ? 'editor' : 'viewer';
+  const role: Role = username.startsWith("adm")
+    ? "admin"
+    : username.startsWith("ed")
+      ? "editor"
+      : "viewer";
 
   const user: User = {
     id: randomUUID(),
     username,
-    role
+    role,
   };
 
   return { ok: true, data: user };
