@@ -1,9 +1,7 @@
-
 /** Función principal: orquesta proceso y muestra resultados. */
 
 import { Register } from "./registerTypes";
 import { formatUser, login } from "./registerValidate";
-
 
 const main = async () => {
   const registros: Register[] = [

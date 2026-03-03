@@ -50,7 +50,6 @@ test.describe("Navegación básica", () => {
       const todosTexts = await elements.allInnerTexts();
 
       console.log("Textos Ingresados:", todosTexts);
-
     });
 
     test("Navegar a pagina y autentificar", async ({ page }) => {
