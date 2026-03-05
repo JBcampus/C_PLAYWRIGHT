@@ -10,7 +10,7 @@ test.describe("Taller 5 - Diálogos JS y Upload de archivos (REFACT)", () => {
   test.afterEach(async () => {
     console.log("[TEST] Finalizando test");
   });
-  
+
   test("Capturar alert/confirm/prompt", async ({ page }) => {
     const alerts = new JsAlertsPage(page);
     await alerts.goto();

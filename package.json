@@ -18,6 +18,7 @@
     "tarea1": "tsx playground/tarea1/index.ts",
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
     "tarea2": "npx playwright test tests/tarea2/tarea.spec.ts --headed",
+    "taller4": "npx playwright test tests/taller4/dialogsAndUpload.spec.ts",
     "taller5": "npx playwright test tests/taller5/authentication.spec.ts --headed"
   },
   "keywords": [],

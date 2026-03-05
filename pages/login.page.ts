@@ -10,11 +10,16 @@ export class LoginPage {
   private readonly password: Locator;
   private readonly submit: Locator;
   private readonly message: Locator;
+
+  private readonly errorContainer: Locator;
+
   constructor(private page: Page) {
     this.username = page.locator("#user-name");
     this.password = page.locator("#password");
     this.submit = page.locator("#login-button");
     this.message = page.locator(".error-message-container");
+
+    this.errorContainer = page.locator("[data-test='error']");
   }
   async goto(): Promise<void> {
     await this.page.goto("https://www.saucedemo.com");
@@ -29,5 +34,13 @@ export class LoginPage {
   }
   async validateLogin(): Promise<void> {
     await expect(this.page).toHaveURL(/inventory/);
+  }
+
+  async expectLoginErrorContains(text: string | RegExp): Promise<void> {
+    await expect(this.errorContainer).toBeVisible();
+    await expect(this.errorContainer).toHaveText(text);
+  }
+  async getErrorText(): Promise<string> {
+    return (await this.errorContainer.textContent())?.trim() ?? "";
   }
 }

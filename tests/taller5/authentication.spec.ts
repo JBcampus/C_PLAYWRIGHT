@@ -25,5 +25,4 @@ test.describe("Autenticación con POM y helpers", () => {
     await login.login("invalid", "secret_sauce");
     await login.validateFail();
   });
-  
 });
