@@ -20,7 +20,7 @@ test.describe("Autenticación con POM y helpers", () => {
     await login.login("standard_user", "secret_sauce");
     await login.validateLogin();
   });
-  
+
   test("Login inválido", async ({ page }) => {
     const login = new LoginPage(page);
     await login.goto();
