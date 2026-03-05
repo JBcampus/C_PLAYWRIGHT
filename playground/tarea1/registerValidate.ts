@@ -1,5 +1,5 @@
 import { randomUUID } from "crypto";
-import { Credentials, Result, Role, User } from "./types";
+import { Credentials, Result, Role, User } from "../clase2/types";
 
 export const login = async (creds: Credentials): Promise<Result<User>> => {
   const { username, password } = creds;

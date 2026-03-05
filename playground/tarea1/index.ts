@@ -1,5 +1,5 @@
-import { Credentials } from "./types";
-import { formatUser, login } from "./validate";
+import { Credentials } from "../clase2/types";
+import { formatUser, login } from "./registerValidate";
 
 const main = async () => {
   const candidates: Credentials[] = [
