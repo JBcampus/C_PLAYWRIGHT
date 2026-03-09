@@ -16,9 +16,10 @@
     "validate": "npm run format:check && npm run lint:ci && npm run typecheck",
     "taller1": "tsx playground/clase-1/index.ts",
     "taller2": "tsx playground/clase-2/index.ts",
-    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts",
-    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts",
-    "taller2Automation": "npx playwright test tests/taller2Automation/taller2.spec.ts"
+    "taller2Automation": "npx playwright test tests/taller2Automation/taller2.spec.ts",
+    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",    
+    "taller5": "npx playwright test tests/taller5/authentication.spec.ts --headed"
   },
   "keywords": [],
   "author": "",

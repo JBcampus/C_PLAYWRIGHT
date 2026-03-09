@@ -27,7 +27,7 @@ test.describe("Taller 4 - Diálogos JS y Upload de archivos", () => {
     });
     // 1. Alert
     await page.click("text=Click for JS Alert");
-    await expect(page.locator("#result")).toHaveText("Yousuccessfully clicked an alert");
+    await expect(page.locator("#result")).toHaveText("You successfully clicked an alert");
     // 2. Confirm
     await page.click("text=Click for JS Confirm");
     // Como hicimos dismiss() arriba, la página mostrará "Youclicked: Cancel" await expect(page.locator("#result")).toHaveText("You clicked:Cancel");
@@ -41,7 +41,7 @@ test.describe("Taller 4 - Diálogos JS y Upload de archivos", () => {
     await page.goto("https://the-internet.herokuapp.com/upload");
     await page.waitForLoadState("domcontentloaded");
     // Creamos un archivo en data con nombre demo-upload.txt.
-    const filePath = path.join(process.cwd(), "data", "demoupload.txt");
+    const filePath = path.join(process.cwd(), "data", "demo-upload.txt");
     // input type="file" tiene id="file-upload"
     await page.setInputFiles("#file-upload", filePath);
     // botón "Upload"
@@ -50,6 +50,6 @@ test.describe("Taller 4 - Diálogos JS y Upload de archivos", () => {
     await page.waitForSelector("#uploaded-files", { state: "visible", timeout: 5000 });
     //WaitForState
     //await page.locator("uploaded-files").waitFor({state:"visible"})
-    await expect(page.locator("#uploaded-files")).toHaveText("demoupload.txt");
+    await expect(page.locator("#uploaded-files")).toHaveText("demo-upload.txt");
   });
 });
