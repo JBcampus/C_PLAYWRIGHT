@@ -1,0 +1,26 @@
+[
+  {
+    "name": "sin productos",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "items": [],
+    "expectedBadge": 0
+  },
+  {
+    "name": "un producto",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "items": ["Sauce Labs Backpack"],
+    "expectedBadge": 1,
+    "firstName": "Juan",
+    "lastName": "Perez",
+    "postalCode": "28001"
+  },
+  {
+    "name": "dos productos",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "items": ["Sauce Labs Backpack", "Sauce Labs Bike Light"],
+    "expectedBadge": 2
+  }
+]
