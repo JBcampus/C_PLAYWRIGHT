@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../../pages/login.page';
+import { LoginPage } from '../../pages/refactLogin.page';
 import { saveState } from '../../helpers/state.helper';
 import { measure } from '../../helpers/metrics.helper';
 
