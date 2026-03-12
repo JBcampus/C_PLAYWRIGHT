@@ -2,7 +2,6 @@ import { test } from "@playwright/test";
 import { LoginPage } from "../../pages/login.page";
 
 test.describe("Autenticación con POM y helpers", () => {
-
   test.beforeAll(async () => {
     console.log("[SUITE] Inicializando suite de autenticación");
   });
@@ -28,5 +27,4 @@ test.describe("Autenticación con POM y helpers", () => {
     await login.login("invalid", "secret_sauce");
     await login.validateFail();
   });
-  
 });

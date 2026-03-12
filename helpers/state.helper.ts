@@ -1,5 +1,5 @@
-import { BrowserContext } from '@playwright/test';
-import { log } from './log.helper';
+import { BrowserContext } from "@playwright/test";
+import { log } from "./log.helper";
 
 /**
  * Guarda el estado autenticado en un archivo JSON.

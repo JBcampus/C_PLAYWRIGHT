@@ -18,7 +18,7 @@
     "taller2": "tsx playground/clase-2/index.ts",
     "taller2Automation": "npx playwright test tests/taller2Automation/taller2.spec.ts",
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
-    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",    
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
     "taller5": "npx playwright test tests/taller5/authentication.spec.ts --headed",
     "tarea3": "npx playwright test tests/tarea03SauceDemo --headed"
   },
