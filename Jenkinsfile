@@ -23,9 +23,7 @@ pipeline {
         sh ''' 
           rm -rf artifacts || true 
           mkdir -p artifacts 
-          docker run --rm \ 
-          -v "$PWD/artifacts:/app/artifacts" \ 
-          $IMAGE 
+          docker run --rm -v "$PWD/artifacts:/app/artifacts" $IMAGE 
         ''' 
 } 
 } 
