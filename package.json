@@ -16,7 +16,12 @@
     "validate": "npm run format:check && npm run lint:ci && npm run typecheck",
     "start:taller2": "tsx playground/clase2/index.ts",
     "start:tarea1": "tsx playground/tarea1/index.ts",
-    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed"
+    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
+    "taller2": "npx playwright test tests/taller2/test1.spec.ts --headed",
+    "tarea2": "npx playwright test tests/tarea2/test1.spec.ts --headed",
+    "taller5a": "npx playwright test ests/taller5/refactDialogAndUpload.spec.ts --headed",
+    "taller5b": "npx playwright test ests/taller5/authentication.spec.ts --headed",
+    "tarea3": "npx playwright test tests/tarea3 --headed"
   },
   "keywords": [],
   "author": "",

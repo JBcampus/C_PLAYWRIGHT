@@ -1,4 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
+import { CustomDevice, CustomDeviceName } from "./data/CustomDevices";
+import { DateFormatter } from "./helpers/utils/time.helper";
 
 /**
  * Read environment variables from file.
@@ -33,7 +35,7 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [
+  /*projects: [
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
@@ -68,8 +70,28 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  
 
+
+
+projects: [
+  { name: "chromium", use: { ...devices["Desktop Chrome"] } },
+  { name: "webkit", use: { ...devices["Desktop Safari"] } },
+  { name: "MobileChrome", use: { ...devices["Pixel 5"] } },
+  {
+    name: CustomDeviceName.CustomIphone,
+    use: { ...CustomDevice[CustomDeviceName.CustomIphone] },
+  },
+  /*
+   { name: "firefox", use: { ...devices["Desktop Firefox"] } },
+  // === Dispositivos móviles (emulación) ===
+  { name: "Mobile Chrome", use: { ...devices["Pixel 5"] } },
+  { name: "Mobile Safari", use: { ...devices["iPhone 12"] } },
+
+  { name: CustomDeviceName.CustomIphone, use: { ...CustomDevice[CustomDeviceName.CustomIphone]}},
+
+  */
+],
   /* Run your local dev server before starting the tests */
   // webServer: {
   //   command: 'npm run start',
