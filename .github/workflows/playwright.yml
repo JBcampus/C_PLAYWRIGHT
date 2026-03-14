@@ -1,50 +1,52 @@
-name: CI 
- 
-on: 
-  push: 
-    branches: ["alumno/cramirezh"] # solo pushes a branch indicado 
-  pull_request: 
-    branches: ["dev"] # solo PRs a branch indicado 
- 
-concurrency: 
-  group: ci-${{ github.ref }} 
-  cancel-in-progress: true 
- 
-jobs: 
-  test: 
-    runs-on: ubuntu-latest 
- 
-    steps: 
-      - name: Checkout 
-        uses: actions/checkout@v4 
- 
-      - name: Setup Node 
-        uses: actions/setup-node@v4 
-        with: 
-          node-version: "20" 
-          cache: "npm" 
- 
-      - name: Install deps (lockfile) 
-        run: npm ci 
- 
-      - name: Install Playwright browsers 
-        run: npx playwright install --with-deps 
- 
-      # Ejecuta solo 1 test, 1 proyecto y sin reporte HTML 
-      - name: Run 1 test no reporter (Chromium only) 
-        run: npx playwright test tests/taller6/00-auth.storage-setup.spec.ts --project=chromium --reporter=list 
-      # Ejecuta solo 1 test, 1 proyecto y con reporte HTML 
-      - name: Run 1 test with reporter (Chromium only) 
-        run: npx playwright test tests/taller7/suiteReportAndEvidence.spec.ts --project=chromium --reporter=html 
- 
-      # Sube el reporte HTML si lo generaste en otra corrida o si más adelante decides habilitarlo 
-      - name: Upload artifacts (reports, screenshots) 
-        if: always() 
-        uses: actions/upload-artifact@v5 
-        with: 
-          name: artifacts 
-          path: | 
+name: CI
+
+on:
+  push:
+    branches: ["alumno/cramirezh"] # solo pushes a branch indicado
+  pull_request:
+    branches: ["dev"] # solo PRs a branch indicado
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install deps (lockfile)
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # Ejecuta solo 1 test, 1 proyecto y sin reporte HTML
+      - name: Run 1 test no reporter (Chromium only)
+        run: npx playwright test tests/taller6/00-auth.storage-setup.spec.ts --project=chromium --reporter=list
+      # Ejecuta solo 1 test, 1 proyecto y con reporte HTML
+      - name: Run 1 test with reporter (Chromium only)
+        run: npx playwright test tests/taller5 --project=chromium --reporter=html
+      - name: Run script
+        run: npm run taller6
+
+      # Sube el reporte HTML si lo generaste en otra corrida o si más adelante decides habilitarlo
+      - name: Upload artifacts (reports, screenshots)
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: artifacts
+          path: |
             playwright-report 
             test-results 
-            artifacts 
-          retention-days: 1 
+            artifacts
+          retention-days: 1
