@@ -20,16 +20,14 @@ pipeline {
 
     stage('Run tests (Docker)') {
       steps {
-        sh ''
-        '
-        rm - rf artifacts || true
-        mkdir - p artifacts
-        docker run--rm\
-          -
-          v "$PWD/artifacts:/app/artifacts"\
-        $IMAGE
-          ''
-        '
+        sh '''
+        rm -rf artifacts || true
+        mkdir -p artifacts
+
+        docker run --rm \
+          -v "$PWD/artifacts:/app/artifacts" \
+          $IMAGE
+        '''
       }
     }
   }
