@@ -20,7 +20,10 @@
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
     "taller5": "npx playwright test tests/taller5/authentication.spec.ts --headed",
-    "tarea3": "npx playwright test tests/tarea03SauceDemo --headed"
+    "tarea3": "npx playwright test tests/tarea03SauceDemo --headed",
+    "suite1": "npx playwright test tests/integrador/suite01-register.spec.ts --project=chromium",
+    "suite2": "npx playwright test tests/integrador/suite02-auth.spec.ts --project=webkit",
+    "suite3": "npx playwright test tests --project=chromium-buyflow --workers=3"
   },
   "keywords": [],
   "author": "",

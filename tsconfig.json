@@ -34,6 +34,6 @@
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "include": ["pages/**/*.ts", "helpers/**/*.ts", "tests/**/*.ts", "playground/**/*.ts"],
+  "include": ["pages/**/*.ts", "helpers/**/*.ts", "tests/**/*.ts", "playground/**/*.ts", "data/CustomDevices.ts"],
   "exclude": ["node_modules", "dist"]
 }

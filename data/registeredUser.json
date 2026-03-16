@@ -1,0 +1,13 @@
+{
+  "name": "ChristianQA",
+  "email": "christian_1773682292679@testing.com",
+  "password": "Test1234!",
+  "firstName": "Christian",
+  "lastName": "Tester",
+  "address": "Av. QA 123",
+  "country": "Canada",
+  "state": "Ontario",
+  "city": "Toronto",
+  "zipcode": "00001",
+  "mobile": "999999999"
+}
