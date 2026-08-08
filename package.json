@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "taller2": "tsx playground/clase2/index.ts"
   },
   "keywords": [],
   "author": "Wilfredo P.",
