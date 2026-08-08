@@ -8,9 +8,14 @@
   },
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
-   "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "karla",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.11",
+    "typescript": "^7.0.2"
+  }
 }
