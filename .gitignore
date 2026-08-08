@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Salida de ejecución
+artifacts/
+
+# Reportes
+reports/
+
+# Archivos temporales
+*.log
+
+# Variables sensibles de Entorno
+.env
+.env.local
