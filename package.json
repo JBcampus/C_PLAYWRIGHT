@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
     "typecheck": "tsc --noEmit",
-    "taller2": "tsx playground/clase2/index.ts"
+    "taller2": "tsx playground/clase2/index.ts",
+    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed"
   },
   "keywords": [],
   "author": "Flavio M.",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@types/node": "^26.2.0",
     "tsx": "^4.23.11",
     "typescript": "^7.0.2"
