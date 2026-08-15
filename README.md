@@ -23,3 +23,10 @@ Ejecutar ejemplo TypeScript:
 Validar tipos:
 
 - npm run typecheck
+
+Comando Playwright:
+
+- npx playwrigth test -ui
+- npm run taller1
+- npm run taller2
+- npm run taller3
