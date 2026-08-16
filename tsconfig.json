@@ -1,0 +1,20 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+"compilerOptions": {
+"target": "ES2022",
+"module": "ESNext",
+"moduleResolution": "Bundler",
+"strict": true,
+"esModuleInterop": true,
+"forceConsistentCasingInFileNames": true,
+"skipLibCheck": true,
+"types": ["node"]
+},
+"include": [
+"pages/**/*.ts",
+"helpers/**/*.ts",
+"tests/**/*.ts",
+"playground/**/*.ts",
+],
+"exclude": ["node_modules", "artifacts"]
+}
