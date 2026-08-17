@@ -9,3 +9,7 @@ reports/
 # Variables sensibles
 .env
 .env.local
+
+# Resultados de Playwright, sugeridos por gemini
+test-results/
+playwright-report/
