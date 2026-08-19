@@ -3,6 +3,7 @@ node_modules/
 
 # Salida de ejecución
 artifacts/
+evidencias/
 
 # Reportes
 reports/

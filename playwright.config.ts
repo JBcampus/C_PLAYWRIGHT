@@ -22,14 +22,23 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [["list", { printSteps: true }]],
+  //reporter: [["list", { printSteps: true }]],
+
+  reporter: [["html", { outputFolder: "reportes-html" }]],
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    // Genera captura de pantalla: 'off' | 'on' | 'only-on-failure'
+    screenshot: "on",
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    // Graba video de la prueba: 'off' | 'on' | 'retain-on-failure' | 'on-first-retry'
+    video: "off",
+
+    // Genera traza completa (timeline, red, DOM, capturas paso a paso)
     trace: "off",
+
+    //actionTimeout: 10 * 1000, // 10 segundos por acción (click, fill, etc.)
+    //navigationTimeout: 20 * 1000, // 20 segundos para cargar páginas
   },
 
   /* Configure projects for major browsers */
@@ -43,7 +52,7 @@ export default defineConfig({
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
     },
-
+    /*
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
