@@ -26,7 +26,7 @@ Validar tipos:
 
 Comando Playwright:
 
-- npx playwright test -ui
+- npx playwright test
 - npm run taller1
 - npm run taller2
 - npm run taller3
