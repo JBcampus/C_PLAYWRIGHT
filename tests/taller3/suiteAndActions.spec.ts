@@ -16,7 +16,6 @@ test.describe("Navegación básica", () => {
 
   //3.Interactuar con paginas
   test.describe("Navegaciones y acciones", () => {
-
     test.beforeAll(async () => {
       console.log("Inicializando prueba Navegación y acciones");
     });
@@ -54,7 +53,5 @@ test.describe("Navegación básica", () => {
       await page.fill("#password", "SuperSecretPassword!");
       await page.click('button[type="submit"]');
     });
-
   });
-  
 });
