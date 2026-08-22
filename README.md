@@ -31,6 +31,7 @@ Comando Playwright:
 - npm run taller2
 - npm run taller3
 - npm run tarea1
+- npm run taller4
 
 Comando para ver Reporte de Pruebas en HTML:
 

@@ -7,7 +7,8 @@
     "taller1": "tsx playground/clase1/taller1.ts",
     "taller2": "tsx playground/clase2/index.ts",
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
-    "tarea1": "npx playwright test tests/tarea1/Login.spec.ts"
+    "tarea1": "npx playwright test tests/tarea1/Login.spec.ts",
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts"
   },
   "keywords": [],
   "author": "Sergio Barrios",
