@@ -7,7 +7,8 @@
     "dev": "tsx playground/clase01/taller01.ts",
     "typecheck": "tsc --noEmit",
     "taller2": "tsx playground/clase2/index.ts",
-    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed"
+    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
+    "tarea1": "npx playwright test tests/tarea1/test01.spec.ts --headed"
   },
   "keywords": [],
   "author": "Edgar R.",
