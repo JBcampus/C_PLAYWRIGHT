@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/tests";
+import { defineConfig, devices } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -31,7 +31,10 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "off",
   },
-
+  //*tiempo expect().
+  /*expect:{
+ timeout: 10*1000,
+},*/
   /* Configure projects for major browsers */
   projects: [
     {
@@ -39,15 +42,15 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
 
-    /*{
+    /* {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
-    },
+    },*/
 
-    {
+    /*{
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
-    },/*
+    },
 
     /* Test against mobile viewports. */
     // {

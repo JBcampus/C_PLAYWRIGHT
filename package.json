@@ -8,8 +8,11 @@
   },
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
-    "typecheck": "tsc --noEmit"
-     "taller3": "npx playwright test testss/taller3/suite.spec.ts --headed"
+    "typecheck": "tsc --noEmit",
+    "clase2": "tsx playground/clase2/index.ts",
+    "taller3": "npx playwright test testss/taller3/suite.spec.ts --headed",
+    "PRUEBA": "npx playwright test testss/PRUEBA/suite1.spec.ts --headed",
+    "taller": "npx playwright test testss/taller/dialogAndUpload.spec.ts --headed"
   },
   "keywords": [],
   "author": "karla",
