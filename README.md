@@ -20,3 +20,7 @@ Ejecutar ejemplo TypeScript:
 - npm run dev
   Validar tipos:
 - npm run typecheck
+
+Comandos playwright:
+
+- npx playwright test --ui

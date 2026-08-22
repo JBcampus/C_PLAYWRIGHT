@@ -7,7 +7,9 @@
     "dev": "tsx playground/clase1/taller1.ts",
     "typecheck": "tsc --noEmit",
     "taller2": "tsx playground/clase2/index.ts",
-    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed"
+    "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
+    "tarea1": "npx playwright test tests/tarea1/suite1.spec.ts --headed",
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed"
   },
   "keywords": [],
   "author": "Carlos R.",
