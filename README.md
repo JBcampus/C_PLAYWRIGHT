@@ -31,7 +31,13 @@ Comando Playwright:
 - npm run taller2
 - npm run taller3
 - npm run tarea1
+- npx playwright test tests/taller3/suiteAndActions.spec.ts
 - npm run taller4
+- npm run tarea2
+- npx playwright test #ejecutar prueba
+- npx playwright test --headed #aperturar el navegador
+- npx playwright test --ui #ejecuta prueba con la ventana del playwrigth
+- npx playwright test tests/tarea2/SD_Login.spec.ts
 
 Comando para ver Reporte de Pruebas en HTML:
 
