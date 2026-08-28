@@ -20,3 +20,5 @@ console.log("Nota", i, ":", notas[i]);
 for (const nota of notas) {
 console.log(nota);
 }
+
+

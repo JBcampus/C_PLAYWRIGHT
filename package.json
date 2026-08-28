@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
     "typecheck": "tsc --noEmit",
-    "test:login": "playwright test tests/tarea1/login.spec.ts"
+    "test:login": "playwright test tests/tarea1/login.spec.ts",
+    "taller3": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
+    "tarea2": "playwright test tests/tarea2/sauceDemo.spec.ts"
   },
   "keywords": [],
   "author": "Malinda Perez.",
