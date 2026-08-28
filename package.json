@@ -9,7 +9,8 @@
     "taller2": "tsx playground/clase2/index.ts",
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
-    "tarea1": "npx playwright test tests/tarea1/login.spec.ts --headed"
+    "tarea1": "npx playwright test tests/tarea1/login.spec.ts --headed",
+    "tarea2": "npx playwright test tests/tarea2/login_out.spec.ts --headed"
   },
   "keywords": [],
   "author": "Wilfredo P.",
