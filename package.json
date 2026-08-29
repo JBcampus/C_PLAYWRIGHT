@@ -9,7 +9,8 @@
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
     "tarea1": "npx playwright test tests/tarea1/Login.spec.ts",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts",
-    "tarea2": "npx playwright test tests/tarea2/SD_Login.spec.ts"
+    "tarea2": "npx playwright test tests/tarea2/SD_Login.spec.ts",
+    "taller5": "npx playwright test tests/taller5 --headed"
   },
   "keywords": [],
   "author": "Sergio Barrios",
