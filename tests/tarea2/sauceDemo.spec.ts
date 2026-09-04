@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { SauceDemoPage } from '../../pages/tarea2/loginPage';
-import { getValidCredentials, getLockedOutCredentials } from '../../helper/tarea2/utils';
+import { getValidCredentials, getLockedOutCredentials } from '../../helpers/tarea2/utils';
 
 /**
  * Suite 1: Simulación de flujo de compras en SauceDemo.

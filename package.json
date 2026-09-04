@@ -9,7 +9,10 @@
     "test:login": "playwright test tests/tarea1/login.spec.ts",
     "taller3": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
-    "tarea2": "playwright test tests/tarea2/sauceDemo.spec.ts"
+    "tarea2": "playwright test tests/tarea2/sauceDemo.spec.ts",
+     "tarea5": "npx playwright test tests/taller5 --headed", 
+     "tarea3": "npx playwright test tests/tarea3"
+     
   },
   "keywords": [],
   "author": "Malinda Perez.",
