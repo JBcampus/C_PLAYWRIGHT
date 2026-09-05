@@ -41,6 +41,7 @@ Ejecutar ejemplo TypeScript:
 
 - npx playwright test tests/tarea3/AE.spec.ts
 - npx run tarea3
+- npx playwright test tests/taller6/01-state-cookies-data-driven.spec.ts --headed
 
 ## Comando para ver Reporte de Pruebas en HTML:
 

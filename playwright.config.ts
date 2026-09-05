@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
+import { DateFormatter } from "./helpers/utils/time.helper";
 
 /**
  * Read environment variables from file.
@@ -20,26 +21,42 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 1,
+  workers: process.env.CI ? 1 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: [["list", { printSteps: true }]],
 
   reporter: [
     ["list", { printSteps: true }],
-    ["html", { outputFolder: "reportes-html" }],
+    [
+      "html",
+      {
+        open: "never",
+        outputFolder: `artifacts/playwright-report/result-${DateFormatter(new Date())}`,
+      },
+    ],
+    [
+      "json",
+      {
+        outputFile: `artifacts/test-results/result-${DateFormatter(new Date())}.json`,
+      },
+    ],
   ],
+
+  // Ruta donde se guardará evidencias de cada ejecución (videos, traces, screenshots)
+  outputDir: "artifacts/run",
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // Genera captura de pantalla: 'off' | 'on' | 'only-on-failure'
-    screenshot: "on",
+    launchOptions: {
+      // headless: false,
+      slowMo: 500, //para entorno produccion se debe deshabilitar, solo para pruebas de desarrollo
+    },
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    trace: "retain-on-failure",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
 
-    // Graba video de la prueba: 'off' | 'on' | 'retain-on-failure' | 'on-first-retry'
-    video: "off",
-
-    // Genera traza completa (timeline, red, DOM, capturas paso a paso)
-    trace: "off",
-
+    baseURL: "https://www.saucedemo.com/",
     //actionTimeout: 10 * 1000, // 10 segundos por acción (click, fill, etc.)
     //navigationTimeout: 20 * 1000, // 20 segundos para cargar páginas
   },
@@ -50,26 +67,26 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
-    /*
+
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },
     },
-    /*
+
     {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
     },
-    */
+
     /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: "Mobile Chrome",
+      use: { ...devices["Pixel 5"] },
+    },
+    {
+      name: "Mobile Safari",
+      use: { ...devices["iPhone 12"] },
+    },
 
     /* Test against branded browsers. */
     // {
