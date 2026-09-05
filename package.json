@@ -11,7 +11,8 @@
     "tarea1": "npx playwright test tests/tarea1/suite1.spec.ts --headed",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
     "tarea2": "npx playwright test tests/tarea2/login.spec.ts --headed",
-    "taller5": "npx playwright test tests/taller5 --headed"
+    "taller5": "npx playwright test tests/taller5 --headed",
+    "tarea3": "npx playwright test tests/tarea3/ --headed"
   },
   "keywords": [],
   "author": "Carlos R.",
