@@ -17,7 +17,7 @@ export class LoginPage {
     this.username = page.locator("#user-name");
     this.password = page.locator("#password");
     this.submit = page.locator("#login-button");
-    this.message = page.locator("[data-test='error']"); 
+    this.message = page.locator(".error-message-container");
   }
 
   async goto(): Promise<void> {
@@ -37,13 +37,4 @@ export class LoginPage {
   async validateLogin(): Promise<void> {
     await expect(this.page).toHaveURL(/inventory/);
   }
-
-  async expectLoginErrorContains(text: string | RegExp): Promise<void> { 
-    await expect(this.message).toBeVisible(); 
-    await expect(this.message).toHaveText(text); 
-  } 
- 
-  async getErrorText(): Promise<string> { 
-    return (await this.message.textContent())?.trim() ?? ""; 
-  } 
 }
