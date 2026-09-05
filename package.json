@@ -1,0 +1,22 @@
+{
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "description": "Proyecto de automatización E2E con Playwright y TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx playground/clase1/taller1.ts",
+    "typecheck": "tsc --noEmit",
+    "test:login": "playwright test tests/tarea1/login.spec.ts",
+    "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
+    "taller5": "npx playwright test tests/taller5/authentication.spec.ts --headed"
+  },
+  "keywords": [],
+  "author": "Yury M.",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.11",
+    "typescript": "^7.0.2"
+  }
+}
