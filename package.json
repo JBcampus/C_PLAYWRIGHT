@@ -9,7 +9,7 @@
     "taller2": "tsx playground/clase2/index.ts",
     "taller3": "npx playwright test tests/taller3/suiteAndActions.spec.ts --headed",
     "taller4": "npx playwright test tests/taller4/dialogAndUpload.spec.ts --headed",
-    "taller5": "npx playwright test tests/taller5 --headed"
+    "taller5": "npx playwright test tests/taller5 --workers=2 --headed"
   },
   "keywords": [],
   "author": "Carlos R.",
