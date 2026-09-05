@@ -1,8 +1,8 @@
 name: CI 
  
 on: 
-  push: 
-    branches: ["alumno/cramirezh"] # solo pushes a branch indicado 
+  # push: 
+  #   branches: ["alumno/cramirezh"] # solo pushes a branch indicado 
   pull_request: 
     branches: ["dev"] # solo PRs a branch indicado 
  
