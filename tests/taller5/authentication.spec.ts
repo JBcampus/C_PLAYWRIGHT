@@ -29,14 +29,8 @@ test.describe("Autenticación con POM y helpers", () => {
 
   test("Login inválido", async ({ page }) => {
     const login = new LoginPage(page);
-
-    test.step("Navegar al login", async () => {
-      await login.goto();
-    });
-
-    test.step("Autenticar", async () => {
-      await login.login("invalid", "secret_sauce");
-    });
+    await login.goto();
+    await login.login("invalid", "secret_sauce");
     await login.validateFail();
   });
 });
