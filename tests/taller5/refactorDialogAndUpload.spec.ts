@@ -20,7 +20,7 @@ test.describe("Taller 5 - Diálogos JS y Upload de archivos (REFACT)", () => {
 
     await alerts.dialogHanler({
       promptText: "Hola desde Playwright",
-      confirmAction: "dismiss",
+      confirmAction: "accept",
       log: true,
     });
 
@@ -28,7 +28,7 @@ test.describe("Taller 5 - Diálogos JS y Upload de archivos (REFACT)", () => {
     await alerts.expectResult("You successfully clicked an alert");
 
     await alerts.clickConfirm();
-    await alerts.expectResult("You clicked: Cancel");
+    await alerts.expectResult("You clicked: Ok");
 
     await alerts.clickPrompt();
     await alerts.expectResult(/You entered:/);

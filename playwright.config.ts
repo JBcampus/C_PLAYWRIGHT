@@ -24,7 +24,10 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: [["list", { printSteps: true }]],
 
-  reporter: [["html", { outputFolder: "reportes-html" }]],
+  reporter: [
+    ["list", { printSteps: true }],
+    ["html", { outputFolder: "reportes-html" }],
+  ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -47,7 +50,7 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
-
+    /*
     {
       name: "firefox",
       use: { ...devices["Desktop Firefox"] },

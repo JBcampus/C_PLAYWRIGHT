@@ -20,11 +20,11 @@ Ejecutar ejemplo TypeScript:
 
 - npm run dev
 
-Validar tipos:
+## Validar tipos:
 
 - npm run typecheck
 
-Comando Playwright:
+## Comando Playwright:
 
 - npx playwright test
 - npm run taller1
@@ -39,6 +39,9 @@ Comando Playwright:
 - npx playwright test --ui #ejecuta prueba con la ventana del playwrigth
 - npx playwright test tests/tarea2/SD_Login.spec.ts
 
-Comando para ver Reporte de Pruebas en HTML:
+- npx playwright test tests/tarea3/AE.spec.ts
+- npx run tarea3
+
+## Comando para ver Reporte de Pruebas en HTML:
 
 - npx playwright show-report
