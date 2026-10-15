@@ -4,7 +4,7 @@ let alumno = "Anthony";
 
 const notas = [15, 18, 9, 20];
 
-function mostrarAlumno(nombre) {
+function mostrarAlumno(nombre: string) {
   console.log("Alumno:", nombre);
 }
 
