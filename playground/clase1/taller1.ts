@@ -2,7 +2,7 @@ const curso = "Playwright";
 let alumno = "Jose";
 const notas = [15, 18, 14, 20, 10];
 
-function mostrarAlumno(nombre) {
+function mostrarAlumno(nombre: string) {
   console.log("Alumno:", nombre);
 }
 mostrarAlumno(alumno);
