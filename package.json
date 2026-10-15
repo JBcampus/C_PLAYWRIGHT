@@ -1,0 +1,19 @@
+{
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "description": "Proyecto de automatización E2E con Playwright y TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx playground/clase1/taller1.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Paola C.",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
