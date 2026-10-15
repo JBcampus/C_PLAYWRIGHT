@@ -13,6 +13,6 @@ if (notas[0] >= 11) {
 for (const i in notas) {
   console.log("Nota", i, ":", notas[i]);
 }
-for (const nota of notas) {
+for (const nota de notas) {
   console.log(nota);
 }
