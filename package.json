@@ -1,19 +1,20 @@
 {
-    "name": "playwright-ts",
-    "version": "1.0.0",
-    "description": "Proyecto de automatización E2E con Playwright y TypeScript",
-    "type": "module",
-    "scripts": {
-        "dev": "tsx playground/clase1/taller1.ts",
-        "taller2" : "tsx playground/clase2/index.ts",
-        "typecheck": "tsc--noEmit"
-    },
-    "keywords": [],
-    "author": "Carlos R.",
-    "license": "ISC",
-    "devDependencies": {
-        "@types/node": "^26.6.5",
-        "tsx": "^4.23.15",
-        "typescript": "^7.0.2"
-    }
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "description": "Proyecto de automatización E2E con Playwright y TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx playground/clase1/taller1.ts",
+    "taller2": "tsx playground/clase2/index.ts",
+    "typecheck": "tsc--noEmit"
+  },
+  "keywords": [],
+  "author": "Carlos R.",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }
