@@ -35,14 +35,23 @@ test.describe("Navegación básica", () => {
         });
         test("Agregar 3 todos y contar elementos", async ({ page }) => {
             await page.goto("https://demo.playwright.dev/todomvc/#/");
-            await page.fill(".new-todo", "Comprar leche");
+            
+            const lista = ["Comprar leche", "Pagar luz", "Llamar a mamá"]
+
+            for(const todo of lista) {
+                await page.fill(".new-todo", todo)
+                await page.keyboard.press("Enter")
+            }
+            
+            /*await page.fill(".new-todo", "Comprar leche");
             await page.keyboard.press("Enter");
             await page.fill(".new-todo", "Pagar luz");
             await page.keyboard.press("Enter");
             await page.fill(".new-todo", "Llamar a mamá");
-            await page.keyboard.press("Enter");
-            const elements = page.locator(".todo-list li");
-            const numElement = await elements.count();
+            await page.keyboard.press("Enter");*/
+
+            const elements = page.locator(".todo-list li");  // buscar elementos li (voy a obtener una lista)
+            const numElement = await elements.count();  // de la lista contabilizo la cantidad de elementos
             console.log("Ingresados:", numElement);
             const todosTexts = await elements.allInnerTexts();
             console.log("Textos Ingresados:", todosTexts);
