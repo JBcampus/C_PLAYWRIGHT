@@ -19,3 +19,7 @@ npm run dev
 - Validar tipos:
 
 npm run typechec
+
+- comando para generar codigo con record de una pagina:
+
+npx playwright codegen 'url'
