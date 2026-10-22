@@ -5,12 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
-    "typecheck": "tsc --noEmit"
+    "taller2": "tsx playground/clase2/index.ts",
+    "tarea1": "tsx playground/tarea1/index.ts",
+    "typecheck": "tsc--noEmit",
+    "open-ui": "npx playwright test --ui"
   },
   "keywords": [],
   "author": "Maida S.",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
