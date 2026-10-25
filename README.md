@@ -19,3 +19,6 @@ Ejecutar ejemplo TypeScript:
 npm run dev
 Validar tipos:
 npm run typecheck
+
+- Comando para generar codigo con record de una pagina:
+  npx playwright codegen 'url'
