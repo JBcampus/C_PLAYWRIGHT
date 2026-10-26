@@ -1,7 +1,7 @@
 const curso = "Playwright";
 let alumno = "Eugenia";
 const notas = [15, 18, 14, 20]; //lista de enteros, booleanos (minuscula), letras 
-function mostrarAlumno(nombre) {
+function mostrarAlumno(nombre: string) {
     console.log("Alumno:", nombre);
 }
 mostrarAlumno(alumno);
