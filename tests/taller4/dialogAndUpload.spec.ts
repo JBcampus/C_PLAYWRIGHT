@@ -13,7 +13,7 @@ test.describe("Taller 4 - Diálogos JS y Upload de archivos", () => {
 
     test("Capturar alert/confirm/prompt", async ({ page }) => {
         await page.goto("https://the-internet.herokuapp.com/javascript_alerts");
-        await page.waitForLoadState("domcontentloaded");
+        await page.waitForLoadState("domcontentloaded"); // siempre ok
         
         // Escuchamos cualquier diálogo JS que aparezca
         page.on("dialog", async (dialog) => { 
