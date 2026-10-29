@@ -10,6 +10,8 @@
     "taller3": "npx playwright test tests/taller3/ suiteAndActions.spec.ts --headed",
     "taller4": "npx playwright test tests/taller3/ suiteAndActions.spec.ts --headed",
     "tarea2": "npx playwright test tests/tarea2/",
+    "taller5": "npx playwright test tests/taller5/refactDialogAndUpload.spec.ts",
+    "taller5:auth": "npx playwright test tests/taller5/authentication.spec.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
