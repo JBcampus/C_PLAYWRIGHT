@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import * as path from "node:path";
-test.describe("Taller 6 - Diálogos JS y Upload de archivos", () => {
+test.describe("Taller 4 - Diálogos JS y Upload de archivos", () => {
     test.beforeEach(async () => {
         console.log("Iniciando test");
     });
@@ -59,7 +59,7 @@ test.describe("Taller 6 - Diálogos JS y Upload de archivos", () => {
             state: "visible",
             timeout: 5000
         });
-        
+
         //WaitForState
         //await page.locator("uploaded-files").waitFor({state:"visible"})
         await expect(page.locator("#uploaded-files")).toHaveText("demoupload.txt");
