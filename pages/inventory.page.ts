@@ -8,7 +8,7 @@ export class InventoryPage {
 
     constructor(private page: Page) {
         this.title = page.locator(".title");
-        this.inventoryItems = page.locator(".inventory_item");
+        this.inventoryItems = page.locator(".inventory_item"); //nth()
         this.menuButton = page.locator("#react-burger-menu-btn");
         this.logoutLink = page.locator("#logout_sidebar_link");
     }
