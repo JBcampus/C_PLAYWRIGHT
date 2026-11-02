@@ -8,7 +8,10 @@
     "taller2": "tsx playground/clase2/index.ts",
     "tarea1": "tsx playground/tarea1/index.ts",
     "typecheck": "tsc --noEmit",
-    "open-ui": "npx playwright test --ui" 
+    "openUi": "npx playwright test --ui",
+    "taller5": "npx playwright test tests/taller5/refactDialogAndUpload.spec.ts",
+    "taller5:auth": "npx playwright test tests/taller5/authentication.spec.ts --debug",
+    "taller6": "npx playwright test tests/taller6/01-state-cookies-data-driven.spec.ts"  
   },
   "keywords": [],
   "author": "Eugenia M.",
