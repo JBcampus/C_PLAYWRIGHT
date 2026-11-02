@@ -5,14 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "tsx playground/clase1/taller1.ts",
-    "taller2" : "tsx playground/clase2/index.ts",
+    "taller2": "tsx playground/clase2/index.ts",
+    "taller4": "tsx tests/taller4/index.ts",
+    "taller5": "npx playwright test tests/taller5/refactDialogAndUpload.spec.ts",
+    "taller5:auth": "npx playwright test tests/taller5/authentication.spec.ts",
     "tarea1": "tsx playground/tarea1/index.ts",
+    "tarea2": "tsx tests/tarea2/tarea2.spec.ts",
+    "tarea3": "npx playwright test tests/tarea3/tarea3.spec.ts",
     "typecheck": "tsc--noEmit"
-    },
+  },
   "keywords": [],
   "author": "Anthony P.",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
