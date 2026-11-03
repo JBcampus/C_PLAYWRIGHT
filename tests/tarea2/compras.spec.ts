@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import * as path from "node:path";
+
 test.describe("Tarea2 - Login", () => {
     test.beforeEach(async () => {
         console.log("Starting test");
