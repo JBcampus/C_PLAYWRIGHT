@@ -73,7 +73,7 @@ export default defineConfig({
       },
       {
         name: `${CustomDeviceName.IphoneDuo}`,
-        use: { ...CustomDevice[CustomDeviceName.IphoneDuo] }
+        use: { ...CustomDevice[CustomDeviceName.IphoneDuo]}
       }
 
     /* Test against branded browsers. */

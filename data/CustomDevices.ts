@@ -13,6 +13,7 @@ export const CustomDevice = Object.freeze({
         locale: "es-ES",
         geolocation: { latitude: -12.04, longitude: -77.03 },
         permissions: ["geolocation"],
+        browserName: 'firefox'
     },
     [CustomDeviceName.IphoneDuo]: {
         viewport: {width: 1398, height: 2034},
@@ -20,5 +21,6 @@ export const CustomDevice = Object.freeze({
         deviceScaleFactor: 1,
         isMobile: true,
         hasTouch: true,
+        browserName: 'chromium'
     }
 });
