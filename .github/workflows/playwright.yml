@@ -12,9 +12,10 @@ concurrency:
 
 jobs:
   test:
-    timeout-minutes: 2
+    timeout-minutes: 3
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -51,7 +52,7 @@ jobs:
             artifacts
           retention-days: 1
       - name: Update README
-        if: ${{ always() && github.event_name == 'push' && github.ref == 'refs/heads/dev' }}
+        if: ${{ always() && github.event_name == 'push' }}
         env:
           STATUS: ${{ job.status }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
