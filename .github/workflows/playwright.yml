@@ -40,6 +40,7 @@ jobs:
 
       # Sube el reporte HTML si lo generaste en otra corrida o si más adelante decides habilitarlo
       - name: Upload artifacts (reports, screenshots)
+        id: upload
         if: always()
         uses: actions/upload-artifact@v5
         with:
