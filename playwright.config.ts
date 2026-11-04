@@ -39,9 +39,9 @@ export default defineConfig({
     trace: "retain-on-failure", 
     screenshot: "only-on-failure", 
     video: "retain-on-failure", 
-    launchOptions: {
-      slowMo: 1000,
-    }
+    // launchOptions: {
+    //   slowMo: 1000,
+    // }
 
   },
 
