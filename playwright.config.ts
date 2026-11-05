@@ -1,7 +1,5 @@
-import { CustomDevice, CustomDeviceName } from './data/CustomDevices';
 import { DateFormatter } from "./helpers/utils/time.helper"
 import { defineConfig, devices } from "@playwright/test";
-import { DateFormatter } from "./helpers/utils/time.helper";
 import { CustomDevice, CustomDeviceName } from "./data/CustomDevices";
 
 const env =
