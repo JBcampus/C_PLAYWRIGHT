@@ -12,7 +12,8 @@
     "tarea1": "tsx playground/tarea1/index.ts",
     "tarea2": "tsx tests/tarea2/tarea2.spec.ts",
     "tarea3": "npx playwright test tests/tarea3/tarea3.spec.ts",
-    "typecheck": "tsc--noEmit"
+    "typecheck": "tsc--noEmit",
+    "ci": "npx playwright test tests/taller5/authentication.spec.ts --project=chromium"
   },
   "keywords": [],
   "author": "Anthony P.",
