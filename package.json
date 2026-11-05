@@ -8,7 +8,12 @@
     "taller2": "tsx playground/clase2/index.ts",
     "tarea1": "tsx playground/tarea1/index.ts",
     "typecheck": "tsc--noEmit",
-    "open-ui": "npx playwright test --ui"
+    "open-ui": "npx playwright test --ui",
+    "tarea2": "playwright test tests/tarea2 --headed",
+    "taller5": "npx playwright test tests/taller5/refactDialogAndUpload.spec.ts",
+    "taller5.1": "npx playwright test tests/taller5/authentication.spec.ts",
+    "taller6": "npx playwright test tests/taller6/01-state-cookies-data-driven.spec.ts",
+    "tarea3": "playwright test tests/tarea3 --headed"
   },
   "keywords": [],
   "author": "Maida S.",

@@ -1,27 +1,104 @@
-name: Playwright Tests
+name: CI
+
 on:
   push:
-    branches: [ main, master ]
+    branches: ["alumno/msanchezi"] # solo pushes a branch indicado
   pull_request:
-    branches: [ main, master ]
+    branches: ["dev"] # solo PRs a branch indicado
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 3
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install deps (lockfile)
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # Ejecuta solo 1 test, 1 proyecto y sin reporte HTML
+      - name: Run 1 test no reporter (Chromium only)
+        run: npx playwright test tests/taller5/authentication.spec.ts --project=chromium --reporter=list
+      # Ejecuta solo 1 test, 1 proyecto y con reporte HTML
+      - name: Run 1 test with reporter (Chromium only)
+        run: npx playwright test tests/taller5/authentication.spec.ts --project=chromium --reporter=html
+
+      # Sube el reporte HTML si lo generaste en otra corrida o si más adelante decides habilitarlo
+      - name: Upload artifacts (reports, screenshots)
+        id: upload
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: artifacts
+          path: |
+            playwright-report
+            test-results
+            artifacts
+          retention-days: 1
+      - name: Update README
+        if: ${{ always() && github.event_name == 'push' }}
+        env:
+          STATUS: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ARTIFACT_URL: ${{ steps.upload.outputs.artifact-url }}
+          RUN_NUMBER: ${{ github.run_number }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path("README.md")
+          content = path.read_text(encoding="utf-8")
+
+          start = "<!-- PLAYWRIGHT_START -->"
+          end = "<!-- PLAYWRIGHT_END -->"
+
+          status = os.environ["STATUS"]
+          result = "Exitoso" if status == "success" else "Fallido"
+          artifact = os.environ["ARTIFACT_URL"]
+
+          section = f"""\
+          {start}
+          ## Última ejecución de Playwright
+
+          - **Estado:** {result}
+          - **Workflow:** [Ver ejecución]({os.environ["RUN_URL"]})
+          - **Artifacts:** {f"[Descargar]({artifact})" if artifact else "No disponible"}
+          - **Tiempo de retención:** 1 día
+
+          {end}"""
+
+          if start in content and end in content:
+              a = content.index(start)
+              b = content.index(end, a) + len(end)
+              content = content[:a] + section + content[b:]
+          else:
+              content = content.rstrip() + "\n\n" + section + "\n"
+
+          path.write_text(content, encoding="utf-8")
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: automatic update Playwright results"
+            git push
+          fi

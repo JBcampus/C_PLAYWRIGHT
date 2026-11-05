@@ -1,0 +1,2 @@
+Archivo de prueba para la Tarea 03 de Playwright.
+Contenido ficticio utilizado para validar la carga de archivos en Automation Exercise.

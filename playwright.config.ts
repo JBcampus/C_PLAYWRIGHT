@@ -1,4 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
+import { DateFormatter } from "./helpers/taller5/utils/time.helper"
+import { CustomDevice, CustomDeviceName } from './data/CustomDevices';
+
+const isCI = Boolean(
+  (globalThis as typeof globalThis & {
+    process?: { env?: Record<string, string | undefined> };
+  }).process?.env?.CI
+);
 
 /**
  * Read environment variables from file.
@@ -20,16 +28,27 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 1,
+  workers: process.env.CI ? 1 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['list', { printSteps: true}]],
+   reporter: [ 
+    ["list", { printSteps: true }], 
+    ['html', { open: 'never',  outputFolder:`artifacts/playwright-report/result-${DateFormatter(new Date)}`}], 
+    ["json", { outputFile: `artifacts/test-results/result-${DateFormatter(new Date)}.json` }], 
+  ],
+  outputDir: "artifacts/run",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'off',
+    trace: "retain-on-failure", 
+    screenshot: "only-on-failure", 
+    video: "retain-on-failure", 
+    launchOptions: {
+      slowMo: 1000,
+    }
+
   },
 
   /* Configure projects for major browsers */
@@ -39,7 +58,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-   /* {
+    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -47,17 +66,21 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },*/
+    },
 
     /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+      {
+        name: 'Mobile Chrome',
+        use: { ...devices['Pixel 5'] },
+      },
+      {
+        name: 'Mobile Safari',
+        use: { ...devices['iPhone 12'] },
+      },
+      {
+        name: `${CustomDeviceName.IphoneDuo}`,
+        use: { ...CustomDevice[CustomDeviceName.IphoneDuo] }
+      }
 
     /* Test against branded browsers. */
     // {
