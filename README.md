@@ -26,9 +26,9 @@ npm run typechec
 <!-- PLAYWRIGHT_START -->
 ## Última ejecución de Playwright
 
-- **Estado:** Fallido
-- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41955727840)
-- **Artifacts:** No disponible
+- **Estado:** Exitoso
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41955951712)
+- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41955951712/artifacts/13383705231)
 - **Tiempo de retención:** 1 día
 
 <!-- PLAYWRIGHT_END -->
