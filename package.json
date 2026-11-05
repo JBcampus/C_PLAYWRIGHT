@@ -7,16 +7,25 @@
     "dev": "tsx playground/clase1/taller1.ts",
     "typecheck": "tsc --noEmit",
     "taller2": "tsx playground/clase2/index.ts",
-    "tarea1": "tsx playground/tarea1/index.ts"
-    
+    "tarea1": "tsx playground/tarea1/index.ts",
+    "openUI": "npx playwright test --ui",
+    "taller5": "playwright test tests/taller5/refactDialogAndUpload.spec.ts",
+    "tarea3": "playwright test tests/tarea3/exerciseContact.spec.ts --headed",
+    "taller5:auth": "npx playwright test tests/taller5/authentication.spec.ts"
   },
   "keywords": [],
   "author": "Paola C.",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.5",
+    "@types/pdfkit": "^0.17.7",
     "prettier": "^3.9.10",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "glob": "^14.0.3",
+    "pdfkit": "^0.20.2"
   }
 }

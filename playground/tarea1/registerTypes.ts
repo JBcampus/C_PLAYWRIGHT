@@ -13,6 +13,7 @@ export interface User {
 export interface Credentials {
   username: string;
   password: string;
+  confirmPassword: string;
 }
 /** Interface de resultado de una operación */
 export interface Result<T> {
