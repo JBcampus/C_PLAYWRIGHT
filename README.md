@@ -22,3 +22,13 @@ npm run typecheck
 
 - Comando para generar codigo con record de una pagina:
   npx playwright codegen 'url'
+
+<!-- PLAYWRIGHT_START -->
+## Última ejecución de Playwright
+
+- **Estado:** Exitoso
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41949371564)
+- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41949371564/artifacts/13379953029)
+- **Tiempo de retención:** 1 día
+
+<!-- PLAYWRIGHT_END -->
