@@ -28,8 +28,8 @@ npx playwright codegen 'url'
 ## Última ejecución de Playwright
 
 - **Estado:** Exitoso
-- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948669615)
-- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948669615/artifacts/13379104627)
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41962402782)
+- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41962402782/artifacts/13385902822)
 - **Tiempo de retención:** 1 día
 
 <!-- PLAYWRIGHT_END -->
