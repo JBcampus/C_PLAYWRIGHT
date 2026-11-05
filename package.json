@@ -14,6 +14,7 @@
     "taller5:auth": "npx playwright test tests/taller5/authentication.spec.ts",
     "taller6": "npx playwright test tests/taller6/02-data driven.login.spec.ts --headed",
     "tarea3": "npx playwright test tests/tarea3/exerciseContact.spec.ts --headed",
+    "taller7IphoneDuo": "npx playwright test tests/example.spec.ts --headed --project='Iphone Duo 2026'",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
