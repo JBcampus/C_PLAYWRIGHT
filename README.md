@@ -22,3 +22,13 @@ npm run dev
 - Validar tipos:
 
 npm run typechec
+
+<!-- PLAYWRIGHT_START -->
+## Última ejecución de Playwright
+
+- **Estado:** Fallido
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41952959110)
+- **Artifacts:** No disponible
+- **Tiempo de retención:** 1 día
+
+<!-- PLAYWRIGHT_END -->
