@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
+import { CustomDevice, CustomDeviceName } from './data/CustomDevice';
 import { DateFormatter } from "./helpers/utils/time.helper"
-import { CustomDevice, CustomDeviceName } from './data/CustomDevices';
 
 /**
  * Read environment variables from file.
