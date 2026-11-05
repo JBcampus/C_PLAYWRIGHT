@@ -15,3 +15,13 @@ Playwright y TypeScript.
 Ejecutar ejemplo TypeScript: npm run dev
 
 Validar tipos: npm run typecheck
+
+<!-- PLAYWRIGHT_START -->
+## Última ejecución de Playwright
+
+- **Estado:** Exitoso
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948691168)
+- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948691168/artifacts/13380226663)
+- **Tiempo de retención:** 1 día
+
+<!-- PLAYWRIGHT_END -->
