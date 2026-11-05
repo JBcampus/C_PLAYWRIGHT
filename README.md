@@ -20,8 +20,8 @@ Validar tipos: npm run typecheck
 ## Última ejecución de Playwright
 
 - **Estado:** Exitoso
-- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948691168)
-- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41948691168/artifacts/13380226663)
+- **Workflow:** [Ver ejecución](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41963439859)
+- **Artifacts:** [Descargar](https://github.com/JBcampus/C_PLAYWRIGHT/actions/runs/41963439859/artifacts/13385843760)
 - **Tiempo de retención:** 1 día
 
 <!-- PLAYWRIGHT_END -->
