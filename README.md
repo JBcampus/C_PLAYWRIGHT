@@ -16,6 +16,10 @@ Playwright y TypeScript.
 
 npm run dev
 
+- Ejecutar las pruebas de la Tarea 3 (contacto y flujo de compra):
+
+npm run tarea3
+
 - Validar tipos:
 
 npm run typechec
