@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 import { DateFormatter } from "./helpers/utils/time.helper"
+import { CustomDevice, CustomDeviceName } from './data/CustomDevices';
 
 /**
  * Read environment variables from file.
@@ -23,10 +24,10 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-   reporter: [ 
-    ["list", { printSteps: true }], 
-    ['html', { open: 'never',  outputFolder:`artifacts/playwright-report/result-${DateFormatter(new Date)}`}], 
-    ["json", { outputFile: `artifacts/test-results/result-${DateFormatter(new Date)}.json` }], 
+  reporter: [
+    ["list", { printSteps: true }],
+    ['html', { open: 'never', outputFolder: `artifacts/playwright-report/result-${DateFormatter(new Date)}` }],
+    ["json", { outputFile: `artifacts/test-results/result-${DateFormatter(new Date)}.json` }],
   ],
   outputDir: "artifacts/run",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -35,9 +36,9 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: "retain-on-failure", 
-    screenshot: "only-on-failure", 
-    video: "retain-on-failure", 
+    trace: "retain-on-failure",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
     launchOptions: {
       slowMo: 1000,
     }
@@ -62,18 +63,18 @@ export default defineConfig({
     },
 
     /* Test against mobile viewports. */
-      {
-        name: 'Mobile Chrome',
-        use: { ...devices['Pixel 5'] },
-      },
-      {
-        name: 'Mobile Safari',
-        use: { ...devices['iPhone 12'] },
-      },
-      {
-        name: `${CustomDeviceName.IphoneDuo}`,
-        use: { ...CustomDevice[CustomDeviceName.IphoneDuo] }
-      },
+    {
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 5'] },
+    },
+    {
+      name: 'Mobile Safari',
+      use: { ...devices['iPhone 12'] },
+    },
+    {
+      name: `${CustomDeviceName.IphoneDuo}`,
+      use: { ...CustomDevice[CustomDeviceName.IphoneDuo] }
+    },
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',
