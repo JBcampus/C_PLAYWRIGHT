@@ -85,7 +85,7 @@ export default defineConfig({
       name: `${CustomDeviceName.IphoneDuo}`,
       use: {
         ...CustomDevice[CustomDeviceName.IphoneDuo],
-        browserName: "firefox",
+        browserName: "chromium",
       },
     },
 

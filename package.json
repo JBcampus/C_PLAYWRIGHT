@@ -15,6 +15,9 @@
     "taller6": "npx playwright test tests/taller6/02-data driven.login.spec.ts --headed",
     "tarea3": "npx playwright test tests/tarea3/exerciseContact.spec.ts --headed",
     "taller7IphoneDuo": "npx playwright test tests/example.spec.ts --headed --project='Iphone Duo 2026'",
+    "integrador:suite1": "npx playwright test tests/integrador/suite1-registro.spec.ts --project=chromium --headed",
+    "integrador:suite2": "npx playwright test tests/integrador/suite2-auth.spec.ts --project=chromium --headed",
+    "integrador:suite3": "npx playwright test tests/integrador/suite3-compra.spec.ts --project=chromium --headed",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
