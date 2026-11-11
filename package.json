@@ -18,6 +18,7 @@
     "integrador:suite1": "npx playwright test tests/integrador/suite1-registro.spec.ts --project=chromium --headed",
     "integrador:suite2": "npx playwright test tests/integrador/suite2-auth.spec.ts --project=chromium --headed",
     "integrador:suite3": "npx playwright test tests/integrador/suite3-compra.spec.ts --project=chromium --headed",
+    "integrador": "npx playwright test tests/integrator/suite1-auth.spec.ts --project=chromium --headed && npx playwright test tests/integrator/suite2-compra.spec.ts --project=chromium --headed && node helpers/generate-pdf.js",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
@@ -26,11 +27,11 @@
   "devDependencies": {
     "@playwright/test": "^1.64.1",
     "@types/node": "^26.6.6",
+    "pdfkit": "^0.20.2",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "@types/pdfkit": "^0.17.7",
-    "pdfkit": "^0.20.2"
+    "@types/pdfkit": "^0.17.7"
   }
 }
